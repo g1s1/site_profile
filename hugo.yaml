@@ -1,0 +1,642 @@
+baseURL: "https://hugo-profile.netlify.app"
+languageCode: "en-us"
+title: "GWT"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 3
+enableRobotsTXT: true
+# disqusShortname: your-disqus-shortname
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+#Menus:
+  # main:
+    # - identifier: blog
+      # name: Blog
+      # title: Blog posts
+      # url: /blogs
+      # weight: 1
+    # - identifier: gallery
+      # name: Gallery
+      # title: Blog posts
+      # url: /gallery
+      # weight: 2
+    #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "GWT"
+  description: Text about my cool site
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/fav.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+  
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    disableThemeToggle: true
+    defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+   # color preference: 
+   # color:
+     # textColor: '#01161E'
+     # secondaryTextColor: '#124559'
+     # backgroundColor: '#EFF6E0'
+     # secondaryBackgroundColor: '#AEC3B0'
+     # primaryColor: '#598392'
+     # secondaryColor: '124559'
+
+  #   darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "GWT" # Brand name for the brand | default is the title variable
+    disableSearch: true
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : true
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Moin, moin, my name is"
+    title: "Gisbert W. Teepe."
+    subtitle: "I am a Clinician Scientists."
+    content: |
+      I investigate digital biomarkers and interventions for depression and cognitive impairments. 
+      I treat patients at the University Hospital of Old Age Psychiatry and Psychotherapy. 
+      I teach at the University of Bern. 
+      I consult startups developing digital therapeutics and biomarkers.
+      I present keynotes and participate in panel discussions. 
+      I train kickboxing. 
+    
+    image: /images/hero_gwt.jpg
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: false
+      name: "Resume"
+      url: "#"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/g1s1/g1s1
+        # - icon: fab fa-x-twitter
+          # url: https://example.com
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/gisbert-w-teepe-2209a5126/
+        - icon: fab fa-researchgate
+          url: https://www.researchgate.net/profile/Gisbert_Teepe
+        - icon: fab fa-google
+          url: https://scholar.google.com/citations?user=7MR00IUAAAAJ&hl=en&oi=ao
+        
+      customIcons:
+        # - icon: /fav.png
+          # url: "https://example.com"
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/robert_diss_3.png"
+    content: |-
+      I am a clinical psychologist with a Ph.D. in digital health from the [Center of Digital Interventions](https://www.c4dhi.org/) @ ETH Zürich. 
+      Currently, I work as a psychotherapist in training at the University Hospital of Old Age Psychiatry and Psychotherapy 
+      ([UPD Bern](https://www.upd.ch/)) and as a group lead (Post-Doc) under [Prof. Dr. med. Stefan Klöppel](https://www.upd.unibe.ch/about_us/people/prof_dr_med_kloeppel_stefan/index_eng.html)
+      at the [University of Bern](https://www.upd.unibe.ch/). My research focuses on digital interventions 
+      and biomarkers for the prevention, diagnosis, prediction, treatment, and monitoring of mental disorders. 
+      My main focus is depression in younger and older populations. To advance the field of mental health, I try to combine 
+      my expertise in psychology, computational neuroscience, and digital health. My work aims 
+      to improve patient outcomes and adherence, as well as provide countermeasures to the increasing healthcare costs.
+      
+      In addition to my scientific work, I work with [ViViRA](https://www.vivira.com/) — a digital therapeutic reimbursable 
+      under the German Healthcare Act — to improve the real-world effectiveness and 
+      adherence of treatments for musculoskeletal diseases. In this work, I support the development of an innovative solution that increases patient engagement and health outcomes. 
+
+
+    skills:
+      enable: true
+      title: "Please reach out if you are interested to connect with me or book me for my expertise regarding the following:"
+      items:
+        - "Digital Treatment"
+        - "Digital Biomarkers"
+        - "Adherence"
+        - "Prevention"
+        - "Panel Discussions"
+        - "Regulation"
+
+  # Experience
+  experience:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - job: "Group Lead (Post-Doc)"
+        company: "University of Bern"
+        companyUrl: "https://www.upd.unibe.ch/"
+        date: "October 2023 - present"
+        info:
+          enable: false
+        featuredLink:
+          enable: false
+          name: "Visit our current research projects."
+          url: "https://www.upd.unibe.ch/research/research_groups/group_kloeppel/index_eng.html"
+        content: |
+          I am currently working as a group lead under [Prof. Dr. med. Stefan Klöppel](https://www.upd.unibe.ch/about_us/people/prof_dr_med_kloeppel_stefan/index_eng.html). 
+          In our work we investigate digital biomarkers
+          and inverventions for patients older than 65 years. The primary clinical outcomes of our interventions and biomarkers 
+          are severity and symptoms of depression and congnitive impairments. 
+
+      - job: "Psychotherapist in Training"
+        company: "UPD Bern"
+        companyUrl: "https://www.upd.ch/"
+        date: "October 2020 - present"
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        info:
+          enable: false
+          content: TBD
+        content: |
+          I am currently working as a psychotherapist in training (CBT) 
+          at the University Hospital of Old Age Psychiatry and Psychotherapy, [UPD Bern](https://www.upd.ch/). 
+          In my work, I treat all disorders across the psychotherapeutic spectrum with a focus on 
+          chronic depression, anxiety disorders, panic disorders, substance abuse disorders (alcohol).
+
+      - job: "Doctoral Researcher"
+        company: "ETH Zurich"
+        companyUrl: "https://www.c4dhi.org/"
+        date: "October 2019 - October 2023"
+        info:
+          enable: false
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        content: |
+          During my employement at the (Center for Digital Health Interventions)["https://www.c4dhi.org/"] 
+          at ETH Zurich,
+          I concepted, planned, and conducted a field waitlist-control study to develop a digital biomarker for 
+          symptoms and severity of subclinical depression, anxiety, and stress. 
+          We developed and deployed a smartphone app to combined a slow-paced-breathing training (Breeze), a 
+          chatbot (BEDDA), voice commands, and daily actional advice. Fir the analysis we recruited more than 150 
+          participants.
+          Besides this main study I planned and conducted various further studies in the field of linguistic 
+          big data (N-Gram), systematic reviews (App Store and investment reviews), meta-analysis (physical 
+          activity), and digital health (expert commentary) leading to several peer-reviewed publications.
+          Besides my research I applied for funding from our industry partner 
+          [CSS health insurance](https://www.css.ch/de/privatkunden.html) (approx. 90k CHF).
+
+      - job: "External Research Consultant (part-time)"
+        company: "ViViRA Health Lab GmbH"
+        companyUrl: "https://www.vivira.com/"
+        date: "September 2021 - present"
+        info:
+          enable: false
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        content: |
+            Currently involved in evaluating the effectiveness and adherence of the most
+            prescribed digital therapeutics under the German Digital Health Care
+             Act (DiGA), ViViRA. My work with ViViRA has lead to various publications. 
+             Responsibilities also include analysis collaboration with the German Federal Institute for 
+             Drugs and Medical Devices and conducting cost evaluations for German 
+             public health insurances.
+
+      - job: "Clinical Psychologist"
+        company: "IFAS"
+        companyUrl: "https://ifas-goettingen.de/"
+        date: "May 2019 - September 2019"
+        info:
+          enable: false
+        content: | 
+          At the Institute for Applied Social Questions, I worked as a clinical psychologist with a specific focus on the treatment and
+          care of adolescents with social problems and mental diabilities (according to 
+          §§ 27, 34, 35a, 41 SGB VIII and §53ff SGB XII, Germany) in day- and night-shifts.
+          The provided treamtent was in a individual and group setting addressing acute and 
+          underlying problems.         
+      - job: "Associate - Strategy and Innovation"
+        company: "Horváth"
+        companyUrl: "https://ifas-goettingen.de/"
+        date: "September 2018 - March 2019"
+        info:
+          enable: false
+        content: | 
+          For the consulting company Horváth & Partners, I prepared and supported strategy workships for a project of a major
+          player in Hamburg's harbor. In addition I supported a foresight workshop focussing
+          on the future of manufacturing using the scenario technique. 
+  
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "Post-Graduate Training in Cognitive Behavioural Therapy"
+        school:
+          name: "apb - Zentrum für Psychotherapie, Konstanz, Germany"
+          url: "https://www.ap-bodensee.de/"
+        date: "2021 - present"
+        # GPA: "3.9 out of 5.0"
+        content: |-
+          Along my clinical and scientific work I receive post-graduate training in Cognitive Behavioural Therapy at a 
+          State-recognized training institute for psychological psychotherapists & child and adolescent psychotherapists. 
+          The aim of the training is to obtain a license to practice psychological psychotherapy (Approbation).
+      - title: "Doctor of Sciences (Dr. sc. ETH Zurich)"
+        school:
+          name: "ETH Zurich, Zurich, Switzerland."
+          url: "https://ethz.ch"
+        date: "2019 - 2023"
+        # GPA: "3.8 out of 5.0"
+        content: |-
+          In my dissertation (Ph.D.) — which I wrote at the Center for Digital Health Interventions — I investigated digital biomarkers and interventions for subclinical and clinical depression, 
+          by conducting systematic reviews, big linguistic data analysis, controlled experiments, and field studies. My research 
+          is published in peer-reviewed journals. 
+        #    - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        #    - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+        featuredLink:
+          enable: true
+          name: "Visit the CDHI Website"
+          url: "https://www.c4dhi.org/"
+      - title: "Master Thesis Computational Neuroscience"
+        school: 
+          name: "Oxford Foundation for Theoretical Neuroscience and Artificial Intelligence, Oxford University, Oxford, GB."
+          url: "https://www.oftnai.org/"
+        # GPA: "4.2 out of 5.0"
+        featuredLink:
+          enable: true
+          name: "Visit the OFTNAI Website" 
+          url: "https://www.oftnai.org/"
+        content: |-
+          In my master thesis, I investigated a computational model of the human brain to understand the 
+          neural basis of border ownership neurons. I used a model replicating the visual pathway (starting from V1 to V4) of a monkey that was trained to 
+          solve a visual classification task. However, my model was unable to replicate the behavior of border ownership neurons in the monkey's brain.
+        date: "2017 - 2018"
+      - title: "Bachelor and Master in Psychology"
+        school:
+          name: "RWTH Aachen University, Aachen, Germany."
+          url: "https://www.rwth-aachen.de"
+          date: "2012-2018"
+        # GPA: "4.2 out of 5.0"
+        featuredLink:
+          enable: false
+          url: "https://example.com"            
+        content: |-
+                I completed my Bachelor and Master in Psychology at the RWTH Aachen University. While studying, I part-time studied computer science and held different student assistant positions in psychology
+                and human-computer interaction.
+
+  # Publications
+  achievements:
+    enable: true
+    title: "Publications"
+    items:
+      - title:
+        content: |
+          Potenzial digitaler Helfer für die psychische Gesundheit junger Menschen Bericht zuhanden der Stiftung Sanitas Krankenversicherung
+          Sanitas Stiftung.
+        url: https://www.sanitas.com/content/dam/sanitas-internet/Dokumente/Digitale_Helfer_2024.pdf
+      - title: 
+        content: 
+          Teepe, G. W., Lukic, Y.X, [...], Fleisch, E., Kowatsch, T. (2023)
+          Development of a Digital Biomarker and Intervention for Subclinical Depression Study protocol for a longitudinal waitlist control study. 
+          BMC Psychology.
+        url: https://bmcpsychology.biomedcentral.com/articles/10.1186/s40359-023-01215-1
+        # image: 
+      - title: 
+        content: | 
+          Teepe, G. W., Glase, E. M., Reips, U.-D. (2023)
+          Increasing Digitalization is associated with Anxiety and Depression: A Google NGram Analysis. 
+          PLOS One.
+        url: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0284091
+        # image:      
+      - title:  
+        content: | 
+          Teepe, G. W., Kowatsch, T., Hans, F.P., Benning, L. (2023) 
+          Effectiveness of a Digital Functional Home Exercise Program: A retrospective observational study with intra-individually matched analysis of post-marketing real-world data. 
+          Journal of Medical Internet Research.
+        url: https://www.jmir.org/2023/1/e43775
+        # image:   
+      - title:
+        content: |
+          Keller, R., Hartmann, S., Teepe, G. W., Lohse, K. M., Alattas, A., Car, L. T., [...] & Kowatsch, T. (2022) 
+          Digital Behavior Change Interventions for the Prevention and Management of Type 2 Diabetes: Systematic Market Analysis. 
+          Journal of Medical Internet Research.
+        url: https://www.jmir.org/2022/1/e33348/
+      - title:
+        content: |
+          Schlieter, H., Marsch, L. A., Whitehouse, D., Otto, L., Londral, A. R., Teepe, G. W., [...] & Kowatsch, T. (2022)
+          Scale-up of Digital Innovations in Health Care: Expert Commentary on Enablers and Barriers. 
+          Journal of Medical Internet Research.
+        url: https://www.jmir.org/2022/3/e24582/
+      - title:
+        content: |
+          Lukic, Y., Teepe, G. W., Fleisch, E., Kowatsch, T. (2022)
+          Breathing as an Input Modality in a Gameful Breathing Training App (Breeze 2): Development and Evaluation Study. 
+          JMIR Serious Games.
+        url: https://games.jmir.org/2022/3/e39186
+      - title:
+        content: |
+          Teepe, G.W., Kowatsch, T., Hans, F.P., Benning, L. (2022) 
+          Preliminary use and outcome data of a digital home exercise program for back, hip and knee pain: A retrospective observational study with a time-series and matched analysis. 
+          JMIR uHealth and mHealth.  
+        url: https://mhealth.jmir.org/2022/12/e38649
+      - title:
+        content: |
+          Pflügner, K., Maier, C., Lukic, Y., Teepe, G. W., Kowatsch, T. (2022) 
+          Mobile Stress Management Applications: An Affordance-Theoretic Perspective on the Adoption and Use.
+          43rd International Conference on Information Systems (ICIS).
+        url: https://cocoa.ethz.ch/downloads/2023/01/2702_Pfluegner%20et%20al%202022%20Mobile%20Stress%20Management%20Applications.pdf
+      - title:
+        content: |
+              Teepe, G. W., Da Fonseca, A., Kleim, B., Jacobson, N. C., Sanabria, A. S., Car, L. T., ... & Kowatsch, T. (2021) 
+              Just-in-time adaptive mechanisms of popular mobile apps for individuals with depression: systematic app search and literature review. 
+              Journal of Medical Internet Research.
+        url: https://www.jmir.org/2021/9/e29412
+      - title:
+        content: | 
+          Mönninghoff, A. [...], Teepe, G. W., [...] & Kowatsch, T. (2021)
+          Long-term effectiveness of mhealth physical activity interventions: systematic review and meta-analysis of randomized controlled trials. 
+          Journal of Medical Internet Research.
+        url: https://www.jmir.org/2021/4/e26699
+      - title:
+        content: |
+          Alattas, A., Teepe, G. W., [...], Kowatsch, T. (2021)
+          To What Scale Are Conversational Agents Used by Top-funded Companies Offering Digital Mental Health Services for Depression?
+          In Proceedings of the 14th International Joint Conference on Biomedical Engineering Systems and Technology (2021) 
+        url: https://www.scitepress.org/Papers/2021/104133/104133.pdf
+      - title:
+        content: |
+          Keller, R., Yao, J., Teepe, G. W., [...], Kowatsch, T. (2021)
+          Are Conversational Agents Used at Scale by Companies Offering Digital Health Services for the Management and Prevention of Diabetes? 
+          In Proceedings of the 14th International Joint Conference on Biomedical Engineering Systems and Technology (2021) 
+        url: https://www.scitepress.org/Papers/2021/104127/104127.pdf
+      - title:
+        content: |
+          Teepe, G. W., Kowatsch, T. (2020)
+           Swiss francs seem to make insured move: comparing daily and monthly financial incentives of  a scalable digital health intervention. 
+           In Proceedings of the 13th International Joint Conference on Biomedical Engineering Systems and Technology  
+        url: https://cocoa.ethz.ch/downloads/2020/02/2526_Teepe%20Kowatsch%202020%20Swiss%20Francs%20Seem%20to%20Make%20Insured%20Move.pdf                          
+  # projects
+  projects:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: A Digital Biomarker for Symptoms and Severity of Emotional Disorders in Older Adults (65+ years old)
+        content: |
+          This research explores digital biomarkers in patients over 65 to accurately predict and classify 
+          emotional disorder (F32-F33, F41-43) symptoms using voice recordings and smartphone data.
+        image: /images/projects/proj_digital_bio.png
+        # featured:
+          # name: Demo
+          # link: https://hugo-profile.netlify.app
+        badges:
+          - "Ongoing"
+          - "Clinical"
+          - "Digital"
+        links:
+          - icon: fa fa-envelope
+            url: mailto:gisbert.teepe@unibe.ch?subject=Digital Biomarker 65+&body=
+          # - icon: fab fa-github
+            # url: https://github.com/gurusabarish/hugo-profile
+          # - icon: fab fa-twitter
+            # url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+      - title: Preventing Symptom Exacerbation due to Loss using a Publicly Available Digital Intervention
+        content: |
+          This research explores the potential of a digital intervention (grievy) to exacerbation of symptoms due to prolonged grief after the
+          loss of a loved one. 
+          We are currently conducting a field study to evaluate the effectiveness of a the publicly available digital intervention.
+        image: /images/projects/grievy.jpg
+        featured:
+          name: Website 
+          link: https://grievy.de/
+        badges:
+          - "Ongoing"
+          - "Prevention"
+          - "Digital"
+        links:  
+          - icon: fa fa-envelope
+            url: mailto:mailto:gisbert.teepe@unibe.ch?subject=grievy Project&body=
+      - title: A Local LLM for diagnostic interviews in geriatric psychiatry and psychotherapy
+        content: |
+          This research explores the potential of a local LLM to transcripe diagnostic interviews. 
+          We are currently conducting a field study to evaluate the effectiveness of a local LLM for diagnostic interviews.
+          The outcome is the judgement of the diagnostic interview by cinical psychologists and psychiatrists (Oberärzte).
+        image: /images/projects/LLM.jpg
+        badges:
+          - "Ongoing"
+          - "Clinical"
+          - "Digital"
+        links:
+        - icon: fa fa-envelope
+          url: mailto:mailto:gisbert.teepe@unibe.ch?subject=LLM Diagnostics&body= 
+      - title: Impact of Violence on Emergency Medicine Staffs' Mental Health
+        content: |
+          This research explores the change in violence against staff in emergency medicine from 2014 to 2022. 
+          We investigate the impact of these incidences on staffs' mental health and turnover intention. 
+          Our aim is to understand the causes of these violent incidents and to develop preventive countermeasures.
+        image: /images/projects/violence.jpg
+        badges:
+          - "Ongoing"
+          - "Prevention"
+          - "Clinical"
+        links:
+        - icon: fa fa-envelope
+          url: mailto:mailto:gisbert.teepe@unibe.ch?subject=Violence&body= 
+      - title: Investigating a Nocturnal Cough Digital Biomarker as Triggers for Behaviour
+        content: |
+         This study evaluates a digital biomarker that counts nocturnal coughs and uses a 
+         traffic light system to potentially trigger behavior changes, based on data from two field studies with over 1000 participants.
+        image: /images/projects/resmonics.jpg
+        badges:
+          - "Ongoing"
+          - "Prevention"
+          - "Digital"
+        featured:
+          name: Website 
+          link: https://www.resmonics.ai/
+        links:
+        - icon: fa fa-envelope
+          url: mailto:mailto:gisbert.teepe@unibe.ch?subject=Violence&body= 
+      - title: On a journey to feel a little better or BEDDA.
+        content: |
+          BEDDA is a chatbot that helps you to feel a little better. It is a conversational agent that provides 
+          psychoeducation, mood tracking, and a gameful slow-paced-breathing training. 
+          The intervention aims to improve prevention of depression by adderssing the subclinical range. 
+          The primary clinical outcomes are severity and symptoms of depression. 
+        image: /images/projects/bedda.jpg
+        featured:
+          name: Website 
+          link: https://www.bedda.me/
+        badges:
+          - "Ongoing"
+          - "Prevention"
+          - "Digital"
+        links:
+          - icon: fa fa-envelope
+            url: mailto:gisbert.teepe@unibe.ch?subject=BEDDA Project&body=
+          # - icon: fab fa-github
+            # url: https://github.com/gurusabarish/converter
+      - title: Breeze - A Gameful Breathing Training
+        content: |
+          We created a mobile app that gamifies slow-paced breathing to improve heart
+          health and mental well-being. It uses the phone's microphone for real-time feedback, 
+          making it easy and fun, aiming to reach a broader audience without extra equipment.
+        image: /images/projects/breeze.jpg
+        featured:
+          name: Website
+          link: https://www.c4dhi.org/projects/breeze/
+        badges:
+          - "Gamification"
+          - "slow-paced breathing"
+        links:
+          - icon: fa fa-envelope
+            url: mailto:gisbert.teepe@unibe.ch?subject=Breeze Project&body=
+      - title: Digital Therapeutics for Musculoskeletal Diseases
+        content: |
+          ViViRA is a digital therapeutic for unspecific back pain. 
+          It is a digital therapeutic for musculoskeletal diseases. 
+          The primary clinical outcomes are pain reduction and functional improvements.
+          We are currently evaluating the effectiveness and adherence of the most prescribed 
+          digital therapeutics under the German Digital Health Care Act (DiGA).
+        image: /images/projects/vivira.jpg
+        featured:
+          name: Website
+          link: https://www.vivira.com/
+        badges:
+          - "DiGA"
+          - "Reimbursable"
+        links:
+        - icon: fa fa-envelope
+          url: mailto:gisbert.teepe@unibe.ch?subject=ViViRA Project&body=
+      - title: A potential connection between digitalization, depression, and anxiety.
+        content: |
+          This research explores the potential connection between digitalization and mental health. 
+          We used Google NGram to analyze the frequency of words related to digitalization and mental health 
+          in books published between 1970 and 2019.
+        image: /images/projects/digitalization.jpg
+        featured:
+          name: Paper
+          link: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0284091
+        links:
+        - icon: fa fa-envelope
+          url: mailto:gisbert.teepe@unibe.ch?subject=NGram Project&body=
+  #Contact
+  contact:
+    enable: true
+    # title: "Custom Name"
+    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+    email: gisbert.teepe@unibe.com
+    btnName: Mail me
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+
+  footer:
+    # recentPosts:
+      # path: "blogs"
+      # count: 3
+      # title: Recent Posts
+      # enable: false
+      # disableFeaturedImage: false
+    socialNetworks:
+      # github: https://github.com/g1s1/g1s1
+      # linkedin: https://www.linkedin.com/in/gisbert-w-teepe-2209a5126/
+      # researchgate: https://www.researchgate.net/profile/Gisbert_Teepe
+      # twitter: https://twitter.com
+      # instagram: https://instagram.com
+      # facebook: https://facebook.com
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
